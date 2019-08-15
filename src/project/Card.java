@@ -24,6 +24,44 @@ public abstract class Card
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
     
+    public enum Suits{HEARTS,DIAMONDS,SPADES,CLUBS};
+    private int value;
+    private String name;
+    private final Suits suits;
+    
+    Card(Suits cSuit, int cValue){
+         
+         suits = cSuit;
+         value = cValue;
+     }
+    
+    public int getValue(){
+        
+        return value;
+    }
+    
+    public int setValue(int cardValue){
+        
+       return value = cardValue;
+       
+    }
+    
+    public String getName(){
+        
+        return name;
+    }
+    
+    public String setName(String cardName){
+        
+        return cardName;
+    }
+    
+    public Suits getSuit (){
+        
+        return suits;
+    }
+    
+    
     @Override
     public abstract String toString();
     

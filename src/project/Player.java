@@ -15,7 +15,7 @@ package project;
  */
 public abstract class Player 
 {
-    private String playerID; //the unique ID for this player
+    private String player; //the unique ID for this player
     
     /**
      * A constructor that allows you to set the player's unique ID
@@ -23,24 +23,24 @@ public abstract class Player
      */
     public Player(String name)
     {
-        playerID= name;
+        player= name;
     }
     
     /**
      * @return the playerID
      */
-    public String getPlayerID() 
+    public String getPlayer() 
     {
-        return playerID;
+        return player;
     }
 
     /**
      * Ensure that the playerID is unique
-     * @param givenID the playerID to set
+     * @param givenName the playerID to set
      */
-    public void setPlayerID(String givenID) 
+    public void setPlayer(String givenName) 
     {
-        playerID = givenID;
+        player = givenName;
     }
     
     /**
