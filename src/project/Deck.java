@@ -62,4 +62,8 @@ public class Deck extends GroupOfCards{
         return deck.size();
     }
 
+    @Override
+    public int getSize() {
+        return size;
+    }
 }
