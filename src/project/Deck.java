@@ -24,7 +24,7 @@ public class Deck extends GroupOfCards{
         for (int i = 1; i <= (size/SUITS.length); i++){
             //inner loop defines the suit of the card
             for (int n = 0; n < SUITS.length; n++){
-                Card card = new Card(value, SUITS[n]);
+                Card card = new Card(i, SUITS[n]);
                 deck.add(card);
             }
         }
@@ -37,7 +37,8 @@ public class Deck extends GroupOfCards{
     
     //returns a random card from available cards in the deck
     public Card pickCard(){
-        Card card = new Card();
+        Card card = null;
+        
         try {
             //generate a random number between the starting index and end index of the deck arraylist
             int i = (int)(Math.random() * deck.size());
