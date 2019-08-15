@@ -26,6 +26,11 @@ public abstract class Game
         gameName = givenName;
         players = new ArrayList();
     }
+    
+    //added to implement a wargame subclass
+    public Game(Player p1, Player p2) {
+        gameName = "";
+    }
 
     /**
      * @return the gameName
