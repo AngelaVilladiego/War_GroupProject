@@ -71,4 +71,8 @@ public class Card {
     public Suits getSuit (){
         return suit;
     }    
+       
+    public void compareTo(Card card2) {
+        //TODO: add method to compare
+    }
 }    
