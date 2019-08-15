@@ -28,7 +28,7 @@ public abstract class Game
     }
     
     //added to implement a wargame subclass
-    public Game(Player p1, Player p2) {
+    public Game() {
         gameName = "";
     }
 
