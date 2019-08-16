@@ -61,6 +61,7 @@ public abstract class WarGame extends Game{
     
     public void declareMatchWinner(WarPlayer winner) {
         
+        
     }
     
     @Override
