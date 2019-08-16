@@ -13,16 +13,13 @@ package project;
  * @modifier paivajo, 2019
  * @modifier AngelaVilladiego, 2019
  * @modifier sheikhash, 2019
- * @modifier Ahmadbustani, 2019
  */
-public abstract class Card 
-{
-    //default modifier for child classes
+public class Card {
+
+    Card(int i, project.Suits suits) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
-    /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
     
     public enum Suits{HEARTS,DIAMONDS,SPADES,CLUBS};
     private int value;
@@ -60,9 +57,49 @@ public abstract class Card
         
         return suits;
     }
+     //accessors and mutators;
     
+  
+    public void compareTo(Card card2) {
+        //TODO: add method to compare
+    }
     
+
+    //Overriding the toString method to print card type in format ex. "Ace of Spades"
+
     @Override
-    public abstract String toString();
+    public String toString(){
+        String name;
+        
+        //switch case value of card
+        switch(value) {
+            case 1:
+                name = "Ace";
+                break;
+            
+            case 11:
+                name = "Jack";
+                break;
+            
+            case 12:
+                name = "Queen";
+                break;
+                
+            case 13:
+                name = "King";
+                break;
+                
+            default:
+                //for values above 13 (king) and between 2 and 10 where value name is integer to string
+                name = new Integer(value).toString();
+                break;
+        }
+        
+        //add " of <suit>" to the end of the name
+        name = name.concat(" of " + suits.toString());       
+        
+        return name;
+    }
     
-}
+   
+}    

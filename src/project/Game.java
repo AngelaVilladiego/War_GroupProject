@@ -26,6 +26,11 @@ public abstract class Game
         gameName = givenName;
         players = new ArrayList();
     }
+    
+    //added to implement a wargame subclass
+    public Game() {
+        gameName = "";
+    }
 
     /**
      * @return the gameName
@@ -61,7 +66,7 @@ public abstract class Game
      * When the game is over, use this method to declare and display a winning
      * player.
      */
-    public abstract void declareWinner();
+    public abstract void declareWinner(Player winner);
 
    
     
