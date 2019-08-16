@@ -16,6 +16,7 @@ public abstract class WarGame extends Game{
     protected boolean inPlay;
     protected Deck deck;
     protected String scorecard;
+    protected int stake;
     
     //constructor to create a game
     public WarGame(WarPlayer nPlayer1, WarPlayer nPlayer2) {
@@ -58,7 +59,7 @@ public abstract class WarGame extends Game{
     }
     
     public void declareMatchWinner(WarPlayer winner) {
-        System.out.println(winner.getName() + " wins the match!");
+        System.out.println(winner.getName() + " wins the match and gained " + stake + " points!");
     }
     
     public void declareWinner(WarPlayer winner) {
