@@ -15,12 +15,15 @@ public abstract class WarGame extends Game{
     protected WarPlayer player2;
     protected boolean inPlay;
     protected Deck deck;
+    protected String scorecard;
     
     //constructor to create a game
     public WarGame(WarPlayer nPlayer1, WarPlayer nPlayer2) {
         player1 = nPlayer1;
         player2 = nPlayer2;
     }
+    
+    public WarGame() {}
     
     public String getGamename() {
         return GAMENAME;
@@ -62,6 +65,15 @@ public abstract class WarGame extends Game{
         System.out.println("Congratulations " + winner.getName() + "! You won the game with a score of " +
                 winner.getScore() + "!");
     }
+    
+    public void showScorecard() {
+        System.out.println("SCORES:");
+        System.out.println(player1.getName() + "'s score: " + player1.getScore());
+        System.out.println(player2.getName() + "'s score: " + player2.getScore());
+        System.out.println("Flips left: " + (deck.cardsLeft() / 2) + "\n");
+    }
+    
+    public abstract void setup();
     
     public abstract void play();
 }

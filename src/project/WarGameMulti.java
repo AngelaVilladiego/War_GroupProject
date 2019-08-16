@@ -15,8 +15,20 @@ public class WarGameMulti extends WarGame {
         super(p1, p2);
     }
     
+    public WarGameMulti(){}
+    
+    @Override
+    public void setup() {
+        
+    }
+    
     @Override
     public void play() {
         //TODO: ADD GAME LOGIC HERE
+    }
+    
+    @Override
+    public void declareWinner(Player winner) {
+        
     }
 }
