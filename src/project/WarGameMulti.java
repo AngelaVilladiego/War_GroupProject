@@ -28,7 +28,7 @@ public class WarGameMulti extends WarGame {
     }
     
     @Override
-    public void declareWinner(Player winner) {
+    public void warMatch() {
         
     }
 }

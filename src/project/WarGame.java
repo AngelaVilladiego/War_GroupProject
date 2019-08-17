@@ -54,17 +54,19 @@ public abstract class WarGame extends Game{
         inPlay = play;
     }
     
-    public void warMatch() {
-        
-    }
+    public abstract void warMatch();
     
     public void declareMatchWinner(WarPlayer winner) {
-        System.out.println(winner.getName() + " wins the match and gained " + stake + " points!");
+        System.out.println("\n" + winner.getName() + " wins the match and gained " + stake + " point(s)!");
+    }
+
+    public void declareWinner(WarPlayer winner, WarPlayer loser) {
+        System.out.println("\nCongratulations " + winner.getName() + "! You won the game with a score of " +
+                winner.getScore() + "! " + loser.getName() + " lost the game with just " + loser.getScore() + " points.");
     }
     
-    public void declareWinner(WarPlayer winner) {
-        System.out.println("Congratulations " + winner.getName() + "! You won the game with a score of " +
-                winner.getScore() + "!");
+    public void declareTie() {
+        System.out.println("\nStalemate! Both players have the same score!");
     }
     
     public void showScorecard() {
