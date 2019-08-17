@@ -15,31 +15,31 @@ package project;
  */
 public abstract class Player 
 {
-    private String playerID; //the unique ID for this player
+    protected String name; //the unique ID for this player
     
     /**
      * A constructor that allows you to set the player's unique ID
      * @param name the unique ID to assign to this player.
      */
-    public Player(String name)
+    public Player(String nName)
     {
-        playerID= name;
+        name = nName;
     }
     
     /**
      * @return the playerID
      */
-    public String getPlayerID() 
+    public String getName() 
     {
-        return playerID;
+        return name;
     }
 
     /**
      * Ensure that the playerID is unique
      * @param givenID the playerID to set
      */
-    public void setPlayerID(String givenID) 
+    public void setName(String givenID) 
     {
-        playerID = givenID;
+        name = givenID;
     }    
 }

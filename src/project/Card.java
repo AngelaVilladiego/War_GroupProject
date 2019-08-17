@@ -72,7 +72,11 @@ public class Card {
         return suit;
     }    
        
-    public void compareTo(Card card2) {
-        //TODO: add method to compare
+    public int compareTo(Card card2) {
+        //convert values to Integers to use compareTo method
+        Integer a = value;
+        Integer b = card2.getValue();
+        
+        return a.compareTo(b);
     }
 }    

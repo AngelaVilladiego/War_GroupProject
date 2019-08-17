@@ -62,11 +62,6 @@ public abstract class Game
      */
     public abstract void play();
     
-    /**
-     * When the game is over, use this method to declare and display a winning
-     * player.
-     */
-    public abstract void declareWinner(Player winner);
 
    
     
